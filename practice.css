@@ -1,0 +1,12 @@
+/* Recommendation is to apply list style on parent i.e ul or ol. 
+In case want to have different list style from one to another within ul then only apply for li */
+ul {
+  list-style: none;
+}
+/* body > ul > li:nth-child(3) {
+  color: aqua;
+}
+
+li {
+  color: red;
+} */
