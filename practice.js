@@ -26,4 +26,8 @@ $(document).ready(function(){
   // Add the border for all element whose class name starts with 'ro'
 
   $("[class^='ro']").css('border','2px solid yellow');
+
+   // Add the border for all element whose class name ends with 'd'
+  $("[class$='d']").css('border','2px solid red');
+  
 });
