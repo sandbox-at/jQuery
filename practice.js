@@ -18,8 +18,12 @@ $(document).ready(function(){
   //   $(this).css("color","red");
   // })
 
-  //Add element to paragraph
-  var para1 = $("p");
-  var check= para1.indexOf("This");
-  console.log(check);
+  // //Add element to paragraph
+  // var para1 = $("p");
+  // var check= para1.indexOf("This");
+  // console.log(check);
+
+  // Add the border for all element whose class name starts with 'ro'
+
+  $("[class^='ro']").css('border','2px solid yellow');
 });
