@@ -17,3 +17,7 @@ $.each($('h3'),function(i,element){
 
 $("h3").text();
 //This wil return all the ext together i.e ShopPolicies
+
+//.filter() , Add programmatic criteria for element to be selected.
+$(".search-bar").filter(function(i,element){
+    return $(element).val().length===0}).css("border","1px solid red");
