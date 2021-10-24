@@ -4,6 +4,7 @@
 * {
   padding: 0;
   margin: 0;
+  /* order-box, The width and height properties (and min/max properties) includes content, padding and border*/
   box-sizing: border-box;
 }
 
@@ -24,6 +25,8 @@ html {
 img{
   height: 100%;
   width: 100%;
+  /* if we style the image above to be half its width (200 pixels) and same height (300 pixels), it will destroy aspect ratio
+  object-fit: cover , The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
   object-fit: cover;
 }
 
