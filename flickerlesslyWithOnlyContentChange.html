@@ -1,0 +1,15 @@
+<script>
+    Flickerlessly = window.Flickerlessly || {}, !function (t) { "use strict"; var e = function (t, e, a, n) { var i = "atNodeInserted" + t, s = "@keyframes " + i + " {from {opacity:0.99} to {opacity:1} }\n"; s += e + "{animation-duration:0.001s;animation-name:" + i + ";visibility:hidden}"; var o = document.getElementsByTagName("head")[0]; if (o) { var r = document.createElement("style"); r.setAttribute("type", "text/css"), r.styleSheet ? r.styleSheet.cssText = s : r.appendChild(document.createTextNode(s)), o.insertBefore(r, o.firstChild) } var c = function (t) { if (t.animationName === i && "object" == typeof t.target) { var s = n === !0 || n === !1 && null === t.target.getAttribute("data-flk-success") ? !0 : !1; console && console.info && console.info("Node " + e + " ready! Execute: " + s, t.target), "function" == typeof a && s && (a(t.target), t.target.setAttribute("data-flk-success", i)), t.target.style.visibility = "visible" } };["animationstart", "MSAnimationStart", "webkitAnimationStart"].forEach(function (t, e) { document.addEventListener(t, c, !1) }) }; t.onReady = function () { for (var t = 0; t < arguments.length; t++) { var a = arguments[t], n = a.selector, i = a.success || null, s = a.persist || !1, o = Math.floor(100 * Math.random() + 1); e(o, n, i, s) } } }(Flickerlessly);
+    Flickerlessly.onReady(
+        {
+            selector: "#app > div > div > main > div > div > div:nth-child(2) > div.sc-fwaKix.cQCaTe.csl-column.csl-column--grow-2 > div > div > div.udf-notification.margin-top-large",
+            persist: true,
+            success: function (el) {
+
+                el.innerHTML = '\n<div class="info primary">\n <span aria-hidden="true" class="info-icon"></span>\n<header  class="udf-normal-text-emphasis header" data-selector="logon-notice-title" tabindex="-1">If you hold one or more of the following products, please sign in or register for Online Banking to apply.</header>\n</div><div class="udf-normal-text body-info primary" data-selector="logon-notice-body" tabindex="-1">\n<li>Current Account</li>\n<li>Savings Account</li>\n<li>Credit Card</li>\n<li>Loans</li>\n<li>Mortgage</li>\n<li>Share Dealing</li>\n<br />This will save you time and keep all your products in one place. If you don&rsquo;t hold any of the above products, please select &lsquo;No&rsquo; and continue as a new customer.</div>\n';
+                //el.className += ' at_target';
+            }
+
+        }
+    );
+</script>
